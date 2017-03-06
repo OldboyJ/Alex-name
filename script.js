@@ -2,20 +2,38 @@
 
 $(document).ready(function() {
 
+  $('button').click(function(){
+   var a = new RegExp('alex', 'ig');
+   var b = new RegExp('a', 'ig');
+   var name = $('#str1').val();
+
+   if(a.test(name)===true){
+     $('#alex_List').append('<h1>'+name+'</h1>');
+   }
+   else if(b.test(name)===true){
+     $('#a_List').append('<h1>'+name+'</h1>');
+   }
+   else{
+     $('#n_List').append('<h1>'+name+'</h1>');
+   }
 
 
-   function checkName(str)  {
-      var input_name = str.toLowerCase();
-        var result = /^alex/.test(input_name);
-        if (result=== true){
-             $("#alexList").append("<div>"+input_name+"</div>");
-        } else
-         if (input_name[0] === "a") {
-            $("#aList").append("<div>"+input_name+"</div>");
-         } else {
-            $("#nList").append("<div>"+input_name+"</div>");
-          }
-       }
+ })
+
+
+
+  //  function checkName(str)  {
+  //     var input_name = str.toLowerCase();
+  //       var result = /^alex/.test(input_name);
+  //       if (result=== true){
+  //            $("#alexList").append("<div>"+input_name+"</div>");
+  //       } else
+  //        if (input_name[0] === "a") {
+  //           $("#aList").append("<div>"+input_name+"</div>");
+  //        } else {
+  //           $("#nList").append("<div>"+input_name+"</div>");
+  //         }
+  //      }
     })
 
 
